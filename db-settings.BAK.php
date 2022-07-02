@@ -6,6 +6,7 @@
 // Set here the database and backup info
 define("DB_USER", "");
 define("DB_PASS", "");
+define("DB_HOST", "");
 
 // This directory should be exist
 define("BACKUP_DIR", "/path/for/mysqldumps");
