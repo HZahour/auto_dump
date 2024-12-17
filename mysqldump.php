@@ -15,5 +15,5 @@ $time = date("Ymd_His");
 
 // Dumps, compresses and saves the every database files
 foreach($databases as $db){
-    exec("/usr/bin/mysqldump --skip-definer -h $db_host -u $db_user -p$db_pass $db | gzip > $backup/$time-$db.dump.gz");
+    exec("/usr/bin/mysqldump -h $db_host -u $db_user -p$db_pass $db | gzip > $backup/$time-$db.dump.gz");
 }
