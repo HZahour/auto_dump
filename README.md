@@ -12,5 +12,8 @@ This script does dump and compress databases that are specified. It is basically
 ### To uncompress
     gzip -dk my_zip_file.gz
 
+### To remove definer
+    sed -i 's/DEFINER=[^*]*\*/\*/g' mysql.dump
+
 ### To restore
     mysql -h dbhost -u dbuser -p db_name < dbdump.dump
